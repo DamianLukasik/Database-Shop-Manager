@@ -16,5 +16,14 @@ namespace Database_Shop_Manager
         {
             InitializeComponent();
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            Program.CloseForm();
+            if (Program.Login(Program.getLogin(), Program.getPassword()))
+            {
+                Program.ChangeForm(new Form2());
+            }            
+        }        
     }
 }
